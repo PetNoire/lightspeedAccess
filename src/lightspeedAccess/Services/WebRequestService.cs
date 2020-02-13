@@ -163,7 +163,7 @@ namespace lightspeedAccess.Services
 
 		private string CreateAuthenticationHeader()
 		{
-			var authInfo = this._config.ApiKey == null ? string.Concat( this._config.Username, ":", this._config.Password ) : string.Concat( this._config.ApiKey, ":", "apikey" );  
+			var authInfo = this._config.ClientID == null ? string.Concat( this._config.Username, ":", this._config.Password ) : string.Concat( this._config.ClientID, ":", "apikey" );  
 			authInfo = Convert.ToBase64String( Encoding.Default.GetBytes( authInfo ) );
 
 			return string.Concat( "Basic ", authInfo );
