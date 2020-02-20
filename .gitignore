@@ -33,4 +33,5 @@ build
 log
 *Credentials*.csv
 
-/src/.vs/lightspeedAccess/v16/Server/sqlite3
+/src/.vs/*
+*.DS_Store
